@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Déclaration du type de document (HTML5) et définition de la langue utilisée sur la page -->
+    <meta charset="UTF-8">  <!-- Encodage des caractères en UTF-8 pour supporter tous les caractères (accentués inclus) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Meta tag pour assurer la compatibilité mobile en définissant la largeur de la page comme celle de l'écran du dispositif -->
+    <title>Résultats - Bourse de fret</title>  <!-- Titre de la page, affiché dans l'onglet du navigateur -->
+    <link rel="stylesheet" href="styles.css">  <!-- Lien vers une feuille de style externe pour appliquer le design de la page -->
+</head>
+<body>
+    <!-- Contenu principal de la page -->
+    <div class="container">  <!-- Conteneur principal pour structurer la page avec des marges et une largeur définie -->
+        <div class="text-center">  <!-- Section centrée horizontalement -->
+            <img src="logo_ct.jpeg" alt="Confluence Transports Logo" class="logo">  <!-- Image du logo de l'entreprise avec une classe pour styliser l'image -->
+            <h1 id="result-title"></h1>  <!-- Titre qui sera mis à jour dynamiquement via JavaScript -->
+        </div>
+
+        <div id="results" class="results">  <!-- Conteneur pour les résultats, stylisé avec une classe spécifique -->
+            <h2 id="result-message"></h2>  <!-- Élément pour afficher un message décrivant la marge calculée -->
+            <!-- Ajout d'un élément pour afficher le prix du gazole -->
+            <p id="prix-gazole" class="small-text"></p>  <!-- Paragraphe pour afficher le prix du gazole avec un style spécifique (petit texte) -->
+        </div>
+
+        <button id="retour-btn" class="btn btn-primary btn-block">Retour</button>  <!-- Bouton pour revenir à la page précédente, stylisé comme un bouton principal avec une largeur pleine (bloc) -->
+    </div>
+
+    <script src="result.js"></script>  <!-- Lien vers le fichier JavaScript externe pour gérer la logique de la page -->
+</body>
+</html>

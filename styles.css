@@ -1,0 +1,163 @@
+/* Global Styles */
+body {
+    background-color: #f4f7f6;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Container and Layout */
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.logo {
+    max-width: 100px;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styles */
+.form-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #34495e;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    border: 1px solid #dcdfe3;
+    background: #f9fafb;
+    box-sizing: border-box;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #1abc9c;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #16a085;
+}
+
+/* Results Section */
+.results {
+    margin-top: 20px;
+    padding: 15px;
+    background: #ecf0f1;
+    border-radius: 8px;
+}
+
+.results h2 {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* Custom Styles for Result Scenarios */
+.red-text {
+    color: red;
+}
+
+.orange-text {
+    color: orange;
+}
+
+.green-text {
+    color: green;
+}
+
+.btn-red {
+    background-color: red;
+}
+
+.btn-orange {
+    background-color: orange;
+    color: black; /* Ensure text is visible on the orange button */
+}
+
+.btn-green {
+    background-color: green;
+}
+
+.result-message {
+    font-size: 0.85rem; /* Smaller font size for result messages */
+    text-align: center;
+    font-weight: bold; /* Matching the button's text weight */
+    margin-top: 20px; /* Adds space between the title and the message */
+}
+
+/* New Styles for Centered Price Information */
+#prix-gazole {
+    text-align: center;
+    font-size: 0.9rem; /* Adjust font size as needed */
+    margin-top: 10px; /* Space above the price info */
+    color: #555; /* Text color, adjust as needed */
+    display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .form-control {
+        height: 35px;
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    .btn-primary {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .results p {
+        font-size: 0.9rem;
+    }
+
+    .result-message {
+        font-size: 0.85rem;
+    }
+}

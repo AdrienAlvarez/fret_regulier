@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Déclaration du type de document (HTML5) et définition de la langue utilisée sur la page -->
+    <meta charset="UTF-8">  <!-- Encodage des caractères en UTF-8 pour supporter tous les caractères (accentués inclus) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Meta tag pour assurer la compatibilité mobile en définissant la largeur de la page comme celle de l'écran du dispositif -->
+    <title>Bourse de fret</title>  <!-- Titre de la page, affiché dans l'onglet du navigateur -->
+    <link rel="stylesheet" href="styles.css">  <!-- Lien vers une feuille de style externe pour appliquer le design de la page -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <!-- Lien vers une police de caractères externe (Roboto) fournie par Google Fonts -->
+</head>
+<body>
+    <!-- Contenu principal de la page -->
+    <div class="container">  <!-- Conteneur principal pour structurer la page avec des marges et une largeur définie -->
+        <div class="text-center">  <!-- Section centrée horizontalement -->
+            <img src="logo_ct.jpeg" alt="Confluence Transports Logo" class="logo">  <!-- Image du logo de l'entreprise avec une classe pour styliser l'image -->
+            <h1>Bourse de fret</h1>  <!-- Titre principal de la page -->
+        </div>
+
+        <div class="form-container">  <!-- Conteneur pour le formulaire avec un style spécifique -->
+            <form id="freight-form">  <!-- Début du formulaire avec un ID unique pour le manipuler avec JavaScript -->
+                <div class="form-group">  <!-- Groupe de champs de formulaire pour organiser les éléments -->
+                    <label for="prix_vente_fret">Prix de vente du fret (€)</label>  <!-- Étiquette pour le champ de saisie du prix de vente du fret -->
+                    <input type="number" class="form-control" id="prix_vente_fret" required>  <!-- Champ de saisie pour le prix de vente du fret, de type numérique, obligatoire -->
+                </div>
+                <div class="form-group">  <!-- Groupe pour les heures de jour -->
+                    <label for="heures_jour">Heures de jour</label>  <!-- Étiquette pour les heures de jour -->
+                    <input type="number" class="form-control" id="heures_jour" required>  <!-- Champ de saisie numérique pour les heures de jour, obligatoire -->
+                </div>
+                <div class="form-group">  <!-- Groupe pour les heures de nuit -->
+                    <label for="heures_nuit">Heures de nuit</label>  <!-- Étiquette pour les heures de nuit -->
+                    <input type="number" class="form-control" id="heures_nuit" required>  <!-- Champ de saisie numérique pour les heures de nuit, obligatoire -->
+                </div>
+                <div class="form-group">  <!-- Groupe pour la distance -->
+                    <label for="distance_km">Distance (km)</label>  <!-- Étiquette pour la distance -->
+                    <input type="number" class="form-control" id="distance_km" required>  <!-- Champ de saisie numérique pour la distance en kilomètres, obligatoire -->
+                </div>
+                <div class="form-group">  <!-- Groupe pour le coût du péage -->
+                    <label for="cout_peage">Coût du péage (€)</label>  <!-- Étiquette pour le coût du péage -->
+                    <input type="number" class="form-control" id="cout_peage" required>  <!-- Champ de saisie numérique pour le coût du péage, obligatoire -->
+                </div>
+                <div class="form-group">  <!-- Groupe pour le poids à l'aller -->
+                    <label for="poids_aller">Poids à l'aller (tonnes)</label>  <!-- Étiquette pour le poids à l'aller -->
+                    <input type="number" class="form-control" id="poids_aller" required>  <!-- Champ de saisie numérique pour le poids à l'aller en tonnes, obligatoire -->
+                </div>
+                <div class="form-group">  <!-- Groupe pour le poids au retour -->
+                    <label for="poids_retour">Poids au retour (tonnes)</label>  <!-- Étiquette pour le poids au retour -->
+                    <input type="number" class="form-control" id="poids_retour" required>  <!-- Champ de saisie numérique pour le poids au retour en tonnes, obligatoire -->
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Calculer</button>  <!-- Bouton pour soumettre le formulaire, stylisé comme un bouton principal avec une largeur pleine (bloc) -->
+            </form>
+
+            <div id="results" class="results" style="display: none;">  <!-- Section pour afficher les résultats du calcul, initialement masquée -->
+                <h2>Résultats:</h2>  <!-- Titre pour la section des résultats -->
+                <p id="marge"></p>  <!-- Paragraphe pour afficher la marge calculée -->
+                <p id="crk"></p>  <!-- Paragraphe pour afficher le coût variable par kilomètre (CRK) -->
+                <p id="cout_total_fret"></p>  <!-- Paragraphe pour afficher le coût total du fret -->
+                <p id="indice"></p>  <!-- Paragraphe pour afficher l'indice de rentabilité -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>  <!-- Lien vers le fichier JavaScript externe pour gérer la logique de la page -->
+</body>
+</html>
